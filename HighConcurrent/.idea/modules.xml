@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/hccp_concurrency/concurrency.iml" filepath="$PROJECT_DIR$/hccp_concurrency/concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/hccp.iml" filepath="$PROJECT_DIR$/hccp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hccp_concurrency/hccp_concurrency.iml" filepath="$PROJECT_DIR$/hccp_concurrency/hccp_concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hccp_concurrency.iml" filepath="$PROJECT_DIR$/hccp_concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/hccp_example/hccp_example.iml" filepath="$PROJECT_DIR$/hccp_example/hccp_example.iml" />
     </modules>
   </component>

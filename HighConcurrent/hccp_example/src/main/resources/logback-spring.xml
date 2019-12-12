@@ -50,7 +50,8 @@
     <logger name="org.apache.http.impl.conn.PoolingHttpClientConnectionManager" level="WARN" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand" level="ERROR" additivity="false">
+    <logger name="org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand" level="ERROR"
+            additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 

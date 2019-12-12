@@ -1,4 +1,4 @@
-package com.zab.hccp;
+package com.zab.hccpexample;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,7 +33,7 @@ public class CountExample {
         log.info("count:{}", count);
     }
 
-    private static void add(){
+    private static void add() {
         count++;
     }
 

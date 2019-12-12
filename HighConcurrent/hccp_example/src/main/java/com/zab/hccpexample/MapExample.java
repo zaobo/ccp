@@ -1,4 +1,4 @@
-package com.zab.hccp;
+package com.zab.hccpexample;
 
 import lombok.extern.slf4j.Slf4j;
 

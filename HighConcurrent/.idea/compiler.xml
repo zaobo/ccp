@@ -7,11 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="concurrency" />
+        <module name="hccp_concurrency" />
         <module name="hccp_example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hccp" target="1.5" />
+      <module name="concurrency" target="1.8" />
+      <module name="hccp" target="1.8" />
+      <module name="hccp_concurrency" target="1.8" />
       <module name="hccp_example" target="8" />
     </bytecodeTargetLevel>
   </component>
