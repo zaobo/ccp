@@ -1,5 +1,6 @@
-package com.zab.hccpexample;
+package com.zab.hccpexample.example.count;
 
+import com.zab.hccpexample.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
@@ -8,19 +9,23 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 @Slf4j
-public class CountExample {
+@ThreadSafe
+public class ConcurrencyExample3 {
 
-    private static int threadTotal = 200;
-    private static int clientTotal = 5000;
+    // 请求数
+    public static int clientTotal = 5000;
 
-    private static long count = 0;
+    // 同时并发执行的线程数
+    public static int threadTotal = 200;
+
+    public static int count = 0;
 
     public static void main(String[] args) throws Exception {
-        ExecutorService service = Executors.newCachedThreadPool();
+        ExecutorService exe = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for (int i = 0; i < clientTotal; i++) {
-            service.execute(() -> {
+            exe.execute(() -> {
                 try {
                     semaphore.acquire();
                     add();
@@ -33,7 +38,7 @@ public class CountExample {
         }
 
         countDownLatch.await();
-        service.shutdown();
+        exe.shutdown();
         log.info("count:{}", count);
     }
 
